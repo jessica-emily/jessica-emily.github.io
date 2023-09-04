@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title> Vanilla Cupcake Recipe </title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;400;600&family=Raleway:wght@200;400;600&display=swap');
+            *{
+                margin: 0;
+                scroll-behavior: smooth;
+               
+            }
+/*-- text --*/
+            body{
+                background-image: repeating-linear-gradient(to right, lightgrey, darkseagreen 0.7%);
+                font-family: 'Barlow Semi Condensed', sans-serif;
+              
+            }
+            h2{
+                scroll-margin-top: 2em;
+                display: block;
+            }
+            h1{
+                padding: 0.75em;
+                color: rgb(253, 194, 209);
+                text-align: center;
+                font-size: 3.75em;
+            }
+            h2{
+                color: rgb(253, 194, 209);
+                padding: 0.5em;
+            }
+            h3{
+                color: rgb(220, 220, 220);
+                padding: 0.35em;
+            }
+            h4{
+                color: rgb(253, 194, 209);
+                padding: 0.35em;
+                font-size: 1.6em;
+            }
+            ul{
+                color: rgb(240, 240, 240);
+                list-style-type: circle;
+            }
+            p{
+                color: rgb(240, 240, 240);
+                padding: 0.5em;
+            }
+            footer{
+                color: rgba(86, 103, 122, 0.8);
+                background-color: rgba(171, 204, 190, 0.92);
+                padding: 0.5em;
+                font-size: 1.25em;
+                font-weight: 515;
+            }
+
+/*-- images --*/
+            .img-responsive{
+                max-width: 100%;
+                display: block;
+                box-sizing: border-box;
+                margin:auto; 
+                padding: 0.5em;
+            }
+
+/*-- layout --*/
+            .banner-box{
+                position: relative;
+                background-color:rgba(240, 240, 240, 0.8);
+            }
+            .title{
+                padding: 0.75em 0.75em;
+                background-color:rgba(86, 103, 122, 0.8);
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                box-sizing: border-box;
+                transform: translate(0,-50%);
+            }
+            .sub-title h2{
+                padding:0;
+                font-style: italic;
+                font-size: 1.4em;
+                color: rgb(240, 240, 240);
+            }
+            .sub-title h3{
+                color: rgb(240, 240, 240);
+            }
+            .main-box{
+                background-color: rgb(86, 103, 122);
+                max-width: 1100px;
+                margin: auto;
+                position: relative;
+                padding: 0.7em;
+                font-size: 1.5em;
+                clear:both;
+                margin-bottom: 1em;
+                margin-top: 1em;
+                box-shadow: 10px 10px 5px rgb(128, 128, 128);
+            }
+            .all-steps{
+                background-color: rgb(110, 128, 148);
+                max-width:100%;
+                padding: 0.5em;
+                overflow: hidden;
+                margin-bottom: 1em;
+                border: 1px solid rgb(110, 128, 148);
+                border-radius: 10px;
+                
+            }
+/*-- columns --*/
+    /*-- ingredients and equipment --*/
+            .start{
+                width: 33.333%;
+                box-sizing: border-box;
+                float: left;
+                padding: 0.25em;
+            }
+    /*-- instructions with 4 images --*/
+            .step{
+                width: 25%;
+                box-sizing: border-box;
+                float: left;
+            }
+    /*-- instructions with two images --*/
+            .step-1{
+                width: 50%;
+                box-sizing: border-box;
+                float: left;
+            }
+
+/*-- navigation --*/
+            .navigation-container{
+                background-color: rgba(171, 204, 190, 0.92);
+                border-radius: 5px;
+                z-index: 1;
+                width:100%;
+                position: sticky;
+                top: 0;
+            }
+            .nav{
+                list-style-type: none;
+                padding: 0.85em;
+                margin: 0;
+                text-align: center;
+            }
+            .nav li{
+                display: inline;
+            }
+            .nav li a{
+                padding: 0.65em;
+                display: inline-block;
+                border: 4px rgba(171, 204, 190, 0.92);;
+                border-radius: 5px;
+                font-size: 1.55em;
+            }
+    /*-- pseudo classes --*/
+            a:link{
+                text-decoration: none;
+                color: rgb(86, 103, 122);
+            }
+            a:visited{
+                color: rgb(86, 103, 122);
+            }
+            a:hover{
+                background-color: rgb(253, 194, 209);
+            }
+            
+
+        </style>
+
+</head>
+
+
+<body>
+<!-- navigation-->
+<div class="navigation-container">
+    <ul class="nav">
+    <li><a href="#ingredients"> Ingredients </a></li>
+    <li><a href="#instruct-cup"> Cupcake Recipe </a></li>
+    <li><a href="#instruct-frost"> Frosting Recipe </a></li>
+    </ul>
+</div>
+
+
+
+<!-- title and some general information-->
+<div class="banner-box">   
+
+    <img class="img-responsive" src="images/banner.jpg" alt="top down image of finished cupcakes">
+    <div class="title"> 
+        <h1> Simple Vanilla Cupcake Recipe </h1> 
+    </div>
+
+</div>
+
+
+<!-- ingredients list -->
+<div class="main-box">
+    <div class="sub-title">
+        <h2> An easy to read recipe for vanilla cupcakes </h2>
+            <h3> Batch of about: 14  ~  Prep time: 25 mins  ~  Cook time: 20 mins  ~  Cool time: 30 mins </h3>
+    </div>
+</div>
+
+<div class="main-box">
+    <h2 id="ingredients"> Ingredients </h2>
+
+<!-- cupcake ingredients-->
+<div class="all-steps">
+    <div class="start">
+        <h3> For the cupcakes </h3>
+        <ul>
+            <li> 115g butter </li>
+            <li> 150g caster sugar </li>
+            <li> 2 eggs </li>
+            <li> 180g flour </li>
+            <li> 1tsp baking powder </li>
+            <li> 115ml milk </li>
+            <li> 1tsp vanilla essence </li>
+        </ul>
+    </div>
+
+<!-- equipment list -->
+    <div class="start">
+        <h3> Equipment </h3>
+        <ul>
+            <li> Large mixing bowl </li>
+            <li> Hand mixer </li>
+            <li> Spatula </li>
+            <li> Sift </li>
+            <li> Measuring cups </li>
+            <li> Measuring spoons </li>
+            <li> Cupcake liners </li>
+            <li> Muffin pan </li>
+        </ul>
+    </div>
+
+<!-- frosting ingredients -->
+    <div class="start">
+        <h3> For the frosting </h3>
+        <ul>
+            <li> 240g icing sugar </li>
+            <li> 115g butter </li>
+            <li> 30ml milk </li>
+            <li> 1/2tsp vanilla essence </li>
+            <li> food coloring (as desired) </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- instructions -->
+<div class="main-box">
+    <h2 id="instruct-cup"> To make the cupcakes </h2>
+        <h3> Preparation </h3>
+            <p> Preheat the oven to 180°c and put cupcake liners into muffin pans. Soften the butter and bring the eggs to room temperature. </p>
+
+    <!-- batter -->
+            <div class="all-steps"> 
+                <h4> Step 1 </h4>
+                    <p> Cream the butter until smooth, add the sugar gradually and beat until the mixture is light and fluffy. </p>
+                <div class="step"><img class="img-responsive" src="images/rs_step_1_a.jpg" alt="starting to cream butter"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_icing_1_b.jpg" alt="butter more creamed"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_1_c.jpg" alt="sugar added and creamed more"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_1_d.jpg" alt="light and fluffy butter and sugar"></div>
+            </div>
+            <div class="all-steps">
+                <h4> Step 2 </h4>
+                    <p> Add the eggs one at a time, beating for at least a minute after each addition. </p>
+                <div class="step"><img class="img-responsive" src="images/rs_step_2_a.jpg" alt="an egg added to the mixture"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_2_b.jpg" alt="egg mixed in"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_2_c.jpg" alt="another egg added"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_2_d.jpg" alt="batter mixed again"></div>
+            </div>
+            <div class="all-steps">
+                <h4> Step 3 </h4>
+                    <p> Sift the flour and baking powder together and add to the mixture alternately with the milk and vanilla. </p>
+                <div class="step"><img class="img-responsive" src="images/rs_step_3_a.jpg" alt="sifted flour and baking powder"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_3_c.jpg" alt="some added to the batter"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_3_d.jpg" alt="some milk and vanilla added"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_3_h.jpg" alt="batter mixed a final time"></div>
+            </div>
+            <div class="all-steps">
+                <h4> Step 4 </h4>
+                    <p> Spoon into the cupcake liners and bake for about 20 minutes or until golden. Finish by cooling on a rack.</p>
+                <div class="step"><img class="img-responsive" src="images/rs_cupcake_liners.jpg" alt="cupakaje liners in tray"></div>    
+                <div class="step"><img class="img-responsive" src="images/rs_step_4_a.jpg" alt="batter in liners before baking"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_4_b.jpg" alt="baked cupcakes in tray"></div>
+                <div class="step"><img class="img-responsive" src="images/rs_step_4_c.jpg" alt="baked cupcakes on a rack"></div>
+    
+            </div>
+</div>
+
+    <!-- frosting -->
+<div class="main-box">
+
+    <h2 id="instruct-frost"> To make the frosting </h2>
+        <div class="all-steps"> 
+            <h4> Step 1 </h4>
+            <p> Combine half of the sifted icing sugar with the softened butter, milk, and vanilla and beat until smooth. </p>
+            <div class="step-1"><img class="img-responsive" src="images/rs_icing_1_a.jpg" alt="ingredients in bowl"></div>
+            <div class="step-1"><img class="img-responsive" src="images/rs_icing_1_b.jpg" alt="ingredients mixed together"></div>
+        </div>
+        <div class="all-steps"> 
+            <h4> Step 2 </h4>
+            <p> Add the remaining icing sugar gradually, mixing until the icing is a good spreading consistency. </p>
+            <div class="step"><img class="img-responsive" src="images/rs_icing_2_a.jpg" alt="some icing sugar added"></div>
+            <div class="step"><img class="img-responsive" src="images/rs_icing_2_b.jpg" alt="frosting mixed"></div>
+            <div class="step"><img class="img-responsive" src="images/rs_icing_2_c.jpg" alt="more icing added"></div>
+            <div class="step"><img class="img-responsive" src="images/rs_icing_2_d.jpg" alt="mixed untill light and fluffy"></div>
+        </div>
+        <div class="all-steps"> 
+            <h4> Step 3 </h4>
+            <p> Add the desired amount of food coloring and frost the cupcakes as you wish. </p>
+            <div class="step"><img class="img-responsive" src="images/rs_icing_3_a.jpg" alt="cupcakes before decoration"></div>
+            <div class="step"><img class="img-responsive" src="images/rs_finished_1.jpg" alt="Top down image of finished cupcakes"></div>
+            <div class="step"><img class="img-responsive" src="images/rs_finished_2.jpg" alt="Top down of finished cupcakes with some space and sprinkles"></div>
+            <div class="step"><img class="img-responsive" src="images/rs_finished_4.jpg" alt="Cupcake with bite taken out"></div>
+        </div>
+</div>
+
+<!-- copyright -->
+<hr>
+<footer> &copy; Copyright Jessica Cheals 2023 </footer>
+
+
+</div>
+</body>
+</html>
