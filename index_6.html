@@ -14,6 +14,13 @@
                 scroll-behavior: smooth;
                
             }
+/*-- colour variables --*/
+            :root{
+                --darkblue: rgb(66, 88, 112);
+                --pink: rgb(255, 203, 221);
+                --white: rgb(240, 240, 240);
+            }
+
 /*-- text --*/
             body{
                 background-image: repeating-linear-gradient(to right, lightgrey, darkseagreen 0.7%);
@@ -26,33 +33,33 @@
             }
             h1{
                 padding: 0.75em;
-                color: rgb(255, 203, 221);
+                color: var(--pink);
                 text-align: center;
                 font-size: 3.75em;
             }
             h2{
-                color: rgb(255, 203, 221);
+                color: var(--pink);
                 padding: 0.5em;
             }
             h3{
-                color: rgb(240, 240, 240);
+                color: var(--white);
                 padding: 0.15em;
             }
             h4{
-                color: rgb(255, 203, 221);
+                color: var(--pink);
                 padding: 0.35em;
                 font-size: 1.35em;
             }
             ul{
-                color: rgb(240, 240, 240);
+                color: var(--white);
                 list-style-type: circle;
             }
             p{
-                color: rgb(240, 240, 240);
+                color: var(--white);
                 padding: 0.5em;
             }
             footer{
-                color: rgba(66, 88, 112, 0.8);
+                color: var(--darkblue);
                 background-color: rgba(171, 204, 190, 0.92);
                 padding: 0.5em;
                 font-size: 1.25em;
@@ -86,13 +93,13 @@
                 padding:0;
                 font-style: italic;
                 font-size: 1.4em;
-                color: rgb(240, 240, 240);
+                color: var(--white);
             }
             .sub-title h3{
-                color: rgb(240, 240, 240);
+                color: var(--white);
             }
             .main-box{
-                background-color: rgb(66, 88, 112);
+                background-color: var(--darkblue);
                 max-width: 1100px;
                 margin: auto;
                 position: relative;
@@ -162,16 +169,15 @@
     /*-- pseudo classes --*/
             a:link{
                 text-decoration: none;
-                color: rgb(66, 88, 112);
+                color: var(--darkblue);
             }
             a:visited{
-                color: rgb(66, 88, 112);
+                color: var(--darkblue);
             }
             a:hover{
-                background-color: rgb(255, 203, 221);
+                background-color: var(--pink);
             }
             
-
         </style>
 
 </head>
@@ -303,8 +309,6 @@
     <h2 id="instruct-frost"> To make the frosting </h2>
         <h3> Preparation: </h3>
                 <p> Allow cupcakes to completely cool before frosting </p>
-
-
 
         <div class="all-steps"> 
             <h4> Step 1 </h4>
